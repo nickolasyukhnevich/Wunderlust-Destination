@@ -1,0 +1,943 @@
+/* Imported fonts */
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Playwrite+NZ:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+NZ:wght@100..400&display=swap');
+/* Defined the rooty colors */
+:root {
+    --background-color: #f8f9fa;
+    --text-color: #000;
+    --logo-max-height: 50px;
+    --nav-margin-left: 20px;
+    --header-padding: 10px;
+    --font-family: Arial, sans-serif;
+    --yellow:#ffd700;
+    --teal:#55BCD5;
+    --purple:#9B26B0;
+    --blue:#499BD2;
+    --darkgray:#222222;
+    --lightgray:#EAEAEA;
+    --white:#FFFFFF;
+    --black:#000000;
+}
+/* CSS RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+header {
+    background: linear-gradient(to bottom, var(--teal), var(--white));
+    width: 100%;
+    display: flex;
+    justify-content:space-between;;
+}
+
+nav ul{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-family: "Montserrat", sans-serif;
+}
+#logo img {
+    margin-left: -30px;
+    height: 120px;
+}
+header ul {
+    margin-top: 0;
+}
+
+li a {
+    font-size: 1em;
+}
+
+.moo {
+    display: flex;
+    align-items: center;
+    
+}
+
+.moo h1{
+ margin-top: 10px;
+    
+}
+
+#skip {
+    display: none;
+}
+h1 {
+    font-family: "Molle", cursive;
+    font-weight: 100;
+    font-size: 3.5em;
+    margin: 0;
+    color: #000;
+}
+header p {
+    font-size: 1em;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.h1p , #logo img{
+    display: flex;
+    flex-direction: column;
+
+}
+#menu-toggle {
+    display: flex;
+    align-items: center;
+    
+}
+
+input[name="toggle"], label[for="toggle"] {
+    display: none;
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+.sr-only{
+    visibility: hidden;
+}
+
+#menu-toggle label {
+    display: none;
+}
+
+#menu-toggle ul {
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+}
+
+#menu-toggle li {
+    margin-left: 20px;
+    margin-top: 1px;
+    padding: 20px 20px;
+    text-align: center;
+}
+
+#menu-toggle a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+#menu-toggle li  {
+    background-color: var(--white);
+}
+
+#menu-toggle li:hover  {
+    background-color: var(--yellow);
+}
+
+#intro {
+    padding: 100px;
+    margin-right: 10px;
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+}
+
+#main-images {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ensures the section takes up the full viewport height */
+    height: 700px;
+    background: linear-gradient(to bottom,  var(--white), var(--teal));
+}
+
+#main-images img {
+    border-radius: 15px; /* Adjusts the roundness of the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle drop shadow */
+    max-width: 95%; /* Ensures the image doesn't exceed 90% of the viewport width */
+    height: auto; /* Maintains the aspect ratio of the image */
+}
+
+.one{
+    margin-right: 20px;
+}
+
+.one h2 {
+    font-size: 2em;
+    font-family: "Molle", cursive;
+    font-weight: 200;
+}
+
+.one p {
+    line-height: 1.5;
+}
+
+#intro h2 {
+    margin: 0;
+    display: flex;
+}
+
+#plan {
+    background-color:var(--yellow);
+    padding: 50px;
+}
+
+#plan h3 {
+    font-family: "Molle", cursive;
+    font-weight: 200;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+h4 {
+    position: relative;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+}
+
+.plan-sections {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.plan-sections section {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--teal);
+    padding: 10px;
+    border:2px solid var(--white);
+    margin-bottom: 10px;
+    width: 300px;
+    height: 250px; /* Space between the sections */
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.plan-sections section img {
+    position: relative;
+    top: 10px;
+    width: 85%;
+    height: auto; /* Maintained aspect ratio */
+    display: block;
+    margin: auto; /* Centered the image */
+}
+
+#testimonials {
+    font-family: "Montserrat", sans-serif;
+    margin: 20px;
+    text-align: left; 
+}
+
+#testimonials h3 {
+    font-family: "Molle", cursive;
+    font-weight: 200;
+    font-size: 1.5em;
+    margin-top: 100px;
+    margin-left: 40px;
+}
+
+/* Testimonial Container */
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+/* Testimonial Section Styling */
+.testimonial-container section {
+    width: 22%;
+    min-width: 200px;
+    max-width: 300px;
+    text-align: center; /* Centered text within each section */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Image Styling */
+.testimonial-container img {
+    max-width: 60%; /* Adjusted the image size */
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 10px; /* Centered the image within the section */
+}
+
+/* Testimonial Text Styling */
+.testimonial-container h4 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+    color:var(--darkgray);
+}
+
+.testimonial-container p {
+    font-size: 0.9em;
+    color: var(--darkgray);
+    margin-bottom: 10px;
+}
+
+.testimonial-container q {
+    font-style: italic;
+    color: var(--darkgray);
+    display: block;
+    margin: 10px 0;
+}
+
+#about {
+    background:var(--blue);
+    padding: 100px;
+    color: #fff;
+    text-align: left;
+    border-radius: 8px;
+}
+
+#about h3 {
+    display: flex;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #000;
+    font-family: "Molle", cursive;
+    font-weight: 100; 
+}
+
+/* About Container */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5px; /* Adjusted the value as needed */
+    padding: 5px;
+}
+
+/* Individual About Sections */
+.about-container section {
+    width: 22%;
+    min-width: 200px;
+    max-width: 250px;
+    color: #000;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centered content horizontally */
+    text-align: center; /* Centered text within each section */
+}
+
+/* Image Styling */
+.about-container img {
+    width: 100px; /* Set a fixed width */
+    height: 100px; /* Set a fixed height */
+    margin-bottom: 10px; /* Space between icon and text */
+}
+
+/* Text Styling */
+.about-container h4 {
+    font-family: "Montserrat", sans-serif;
+    margin: 10px 0 5px;
+    font-size: 1.6em;
+    color: #000000;
+}
+
+.about-container p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    color: #000000;
+    margin: 0; /* Removed default margin */
+}
+
+#contact {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+#contact h3 {
+    font-family: "Molle", cursive;
+    font-size: 24px;
+    margin-top: 50px;
+    position: relative;
+    top: 80px;
+    right: 0px;
+}
+.form-required {
+    font-size: 12px;
+    color: gray;
+}
+form {
+    display: grid;
+    margin-top: 20px;
+    margin-right: 120px;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap:10px;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+}
+label {
+    display: flex;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#nums{
+    margin-top: 102px;
+}
+
+#selects{
+    margin-top: 33px;
+}
+
+#selects .custom-select{
+    width:175px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 350px;
+    padding: 10px;
+    border: 2px solid var(--purple);
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.form-required {
+    font-family: Arial, Helvetica, sans-serif;
+}
+fieldset {
+    display: flex;
+    border: none;
+    grid-column: span 4;
+}
+legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.radio-input {
+    display: inline-block;
+    margin-right: 20px;
+}
+.radio-input input[type="radio"] {
+    display: none;
+}
+.radio-control {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--purple);
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+}
+.radio-input input[type="radio"]:checked + .radio-control::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: var(--purple);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.radio-label {
+    position: relative;
+    top: 5px;
+    right: 20px;
+}
+.custom-select {
+    position: relative;
+    display: inline-block;
+    width: 150%;
+}
+.custom-select select {
+    display: inline-block;
+    width: 197%;
+    padding: 10px;
+    border: 2px solid var(--purple);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: none;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.custom-select .focus {
+appearance: none;
+}
+input[type="submit"] {
+    position: relative;
+    left: 165px;
+    background: var(--purple);
+    color: #fff;
+    border: none;
+    padding: 10px 60px;;
+    cursor: pointer;
+    font-size: 16px;
+    grid-column: span 4;
+    justify-self: end;
+    margin: 0;
+}
+input[type="submit"]:hover {
+    background: #ec81ff;
+}
+
+#selects{
+    position: relative;
+}
+#selects::after,
+#selects::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 15px;
+    height: 15px;
+    border-right: 2px solid var(--purple);
+    border-bottom: 2px solid var(--purple);
+    transform: rotate(45deg);
+}
+
+#selects::after {
+    left: 310px; /* Adjust the position for the first arrow */
+    top: 30px;  /* Adjust the position for the first arrow */
+}
+
+#selects::before {
+    left: 310px; /* Adjust the position for the second arrow */
+    top: 115px;  /* Adjust the position for the second arrow */
+}
+
+footer {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: initial;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+    background-color: var(--lightgray);
+    font-size: 14px;
+    margin-top: 80px;
+}
+
+footer p {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px; /* Reduced the gap to bring the links closer together */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--darkgray);
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1510px) {
+   header{
+    display: block;
+    justify-content: center;
+    height: 200px;
+   }
+
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px
+}
+
+#img-grid {
+    display: block;
+    justify-content: center;
+    gap: 1rem; /* Adjusted the spacing between images */
+}
+
+.one{
+    display: flex;
+    flex-direction:column ;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    margin: 0;
+}
+
+
+
+#intro h2 {
+    display: flex;
+    justify-content: left;
+}
+
+#intro p{
+
+    min-width: 58%;
+    max-width: 58%;
+}
+
+   .moo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #menu-toggle {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        right: 110px;
+    }
+
+    #menu-toggle ul{
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    #menu-toggle li {
+        margin-left: 20px;
+        margin-top: 1px;
+        padding: 15px 15px;
+        text-align: center;
+        
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+        place-items: center;
+        margin-top: 20px;
+        margin-left: 100px;
+    }
+
+    .custom-select select{
+        width: 200%;
+    }
+    
+    #nums {
+        margin-top: 0px;
+    }
+
+    input[type="submit"]{
+        top: 70px;
+        left: 0px;
+    }
+
+    #contact h3 {
+        display: flex;
+        justify-content: left;
+        font-family: "Molle", cursive;
+        font-size: 24px;
+        margin-top: 50px;
+        margin-left: 270px;
+        top: 0px;
+
+    }
+
+    
+.one p {
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+}
+
+@media (max-width: 735px) {
+
+    #menu-toggle {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        right: 110px;
+    }
+    #menu-toggle li {
+        margin-left: 20px;
+        margin-top: 1px;
+        padding: 15px 15px;
+        text-align: center;
+        font-size: 14px;
+        
+        
+    }
+
+    
+
+    nav ul{
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        font-family: "Montserrat", sans-serif;
+    }
+    
+}
+
+@media (max-width: 700px){
+    .moo{
+        display: block;
+        
+    }
+
+    h1{
+        display: flex;
+        justify-content: left;
+        margin-left: 30px;
+        font-size: 2em
+    }
+
+    header p {
+        margin-left: 30px;
+    }
+
+    footer {
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        flex-direction: column;
+        padding: 30px 60px;
+        background-color: var(--lightgray);
+        font-size: 14px;
+        margin-top: 80px;
+    }
+    
+    footer p {
+        font-family: "Montserrat", sans-serif;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+    
+    .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap:0;
+   /* Reduced the gap to bring the links closer together */
+    }
+    
+    .footer-links a {
+        margin-bottom: 10px;
+        text-decoration: none;
+        color: var(--darkgray);
+    }
+    
+    .footer-links a:hover {
+        text-decoration: underline;
+    }
+
+    .plan-container{
+        margin-left: 50px;
+  
+    }
+
+    #menu-toggle {
+        position: relative; 
+        bottom: 150px;
+        left: 0px;
+        display: flex;
+        justify-content: flex-end;/* I Ensured the dropdown is positioned relative to its container */
+    }
+
+    #menu-toggle label {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.3em;
+        width: 192px;
+        display: block;
+        background-color: var(--yellow);
+        padding: 20px 15px;
+        cursor: pointer;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    /* Hide the checkbox itself */
+    #menu-toggle input[type="checkbox"] {
+        display: none;
+    }
+
+    /* Initially hide the menu items */
+    #menu-toggle ul {
+        display: none;
+        position: absolute;
+        top:50px; /* Positioned the dropdown below the toggle button */
+        right: 0px;
+        width: 222px;
+        height: 251px;
+        background-color: var(--teal);
+        padding: 10px 0;
+        z-index: 1000;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #menu-toggle input[type="checkbox"]:checked ~ ul {
+        display: block;
+    }
+
+    /* Styling menu items in the dropdown */
+    #menu-toggle ul li {
+        margin: 0 0;
+        border-bottom: 1px solid var(--black);
+    }
+
+    #menu-toggle ul li a {
+        font-family: "Montserrat", sans-serif;;
+        color: var(--black);
+        font-weight: 700;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #menu-toggle input[type="checkbox"]:checked + label {
+        background-color: #000; /* Changed to black */
+        color: #fff; /* Changed text to white */
+    }
+
+    #menu-toggle li  {
+        background-color: #00000000;
+    }
+
+    #intro p {
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .testimonial-container section {
+        width: 45%;
+    }
+    
+}
+
+.slideshowContainer {
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0 5px;
+  width: 100%;
+  height: 500px;
+}
+
+.imageSlides {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: -1;
+}
+
+/* add 'visible' class via Javascript */
+.visible {
+  opacity: 1;
+}
+
+.slideshowArrow {
+  font-size: 7em;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.slideshowArrow:hover {
+  opacity: 0.75;
+}
+
+#leftArrow {
+  position: absolute;
+  left: 4%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#rightArrow {
+  position: absolute;
+  right: 4%;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
+
+.slideshowCircles {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.circle {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid 2px rgba(255, 255, 255, 0.5);
+  transition: 1s ease-in-out;
+}
+
+.dot {
+  background-color: rgba(255, 255, 255, 0.7);
+  border: solid 2px rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 435px) {
+    #menu-toggle{
+        bottom: 0px;
+        width: 250px;
+    }
+    #menu-toggle ul {
+        width: 170px;
+        height: 249px;
+    }
+}
